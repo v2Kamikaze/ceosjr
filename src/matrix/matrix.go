@@ -40,7 +40,7 @@ func (m *Matrix) ReadFile(path string) error {
 
 	// O(n)
 	for fileScanner.Scan() {
-		line = strings.Split(fileScanner.Text(), ",")
+		line = strings.Split(fileScanner.Text(), " ")
 		m.data = append(m.data, parseLine(line))
 	}
 
